@@ -8,13 +8,22 @@ html {
 
 @font-face {
 	font-family: "Proxima Nova";
-	src: url("../proxima-nova-regular-webfont.woff");
+	src: url("../fonts/proxima-nova-regular-webfont.woff");
 }
 
 body {
 	font-size: 1.6rem;
 	font-family: "Proxima Nova";
 	background-color: #E0E0E0;
+}
+
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+}
+
+.container--small {
+	max-width: 70rem;
 }
 
 img { 
@@ -111,13 +120,14 @@ img {
 .description {
 	background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../images/flower.png");
 	background-size: cover;
-	padding: 12rem 40rem;
+	background-repeat: no-repeat;
 	text-align: center;
 }
 
-.container--small p {
-	font-size: 2.8rem;
+.description__content {
+	font-size: 2.5rem;
 	color: #fff;
+	padding: 10rem 0;
 }
 
 .footer__content {
@@ -140,31 +150,30 @@ img {
 }
 
 .footer__listUp {
-  font-size: 1.4rem;
-  color: #333333;
-  line-height: 2.143;
-  margin-right:;
+	font-size: 1.4rem;
+	color: #333333;
+	padding: 0 1.5rem;
 }
 
 .footer__listUp div {
-  font-size: 1.4rem;
-  color: #A7A6A6;
-  font-weight: bold;
-  text-transform: uppercase;
+	font-size: 1.4rem;
+	color: #A7A6A6;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-bottom: 3rem;
 }
 
-.footer__listDown li{
+.footer__listUp li {
+	padding-bottom: 1.5rem;
+}
+
+.footer__listDown li {
 	display: inline-block;
 }
 
 .footer__listDown li:not(:last-child):after {
 	content: '';
 	margin: 1rem; 
-}
-
-.container {
-	max-width: 140rem;
-	padding: 0 auto;
 }
 
 .footer__up {
@@ -175,38 +184,44 @@ img {
 	margin-top: 4rem;
 }
 
-.carousel > div {
-  width: auto;
-  height: 512px;
+.carousel div {
+	height: 50rem;
 }
 
 .carousel__content {
+	padding: 10rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.carousel__content * {
 	text-align: center;
 }
 
-.before--carousel {
+.before__carousel {
 	background-color: #149e0a;
 }
 
-.after--carousel {
+.after__carousel {
 	background-color: #00b2ff;
 }
 
-.before--carousel h6, .after--carousel h6 {
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 10rem;
+.before__carousel h6, .after__carousel h6 {
+	font-size: 1.2rem;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 10rem;
 }
 
-.before--carousel h2, .after--carousel h2 {
-  font-size: 4rem;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 10rem;
+.before__carousel h2, .after__carousel h2 {
+	font-size: 4rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 10rem;
 }
 
 .image__background {
