@@ -233,3 +233,61 @@ img {
 .images {
 	display: flex;
 }
+
+.carousel div img {
+	height: 100%;
+	width: 100%;
+}
+
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
+.slick-dots {
+	top: -7.5rem;
+	bottom: auto;
+}
+
+.slick-dots li::before {
+	font-family: "Font Awesome 5 Free";
+	color: #eff0f2;
+	content: "\f111";
+	font-weight: 400;
+	font-size: 1.3rem;
+	transition: all 0.5s;
+}
+
+.slick-dots li.slick-active::before {
+	font-family: "Font Awesome 5 Free";
+	color: #eff0f2;
+	content: "\f111";
+	font-weight: 700;
+	font-size: 1.3rem;
+	transition: all 0.5s;
+}
+
+.slick-dots li button:before {
+	content: none;
+}
+
+.slick-next {
+	right: 20%;
+}
+
+.slick-next::before {
+	font-family: "Font Awesome 5 Free";
+	white-space: pre-wrap;
+	content: "\A\f054";
+	color: #149e0a;
+	font-size: 2.5rem;
+	font-weight: 600;
+	opacity: 1;
+	display: block;
+    background: #fff;
+    height: 7.5rem;
+    width: 5.5rem;
+    border-right: 2px solid #149e0a;
+    position: absolute;
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
