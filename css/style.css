@@ -31,11 +31,13 @@ body {
 }
 
 img { 
-	display: block; 
+	display: block;
+	width: 100%; 
 }
 
 .banner {
 	background-image: url("../images/forest.png");
+	background-size: cover;
 	padding: 3rem 5rem 19rem 2.5rem;
 }
 
@@ -93,6 +95,30 @@ img {
 	margin-bottom: 36rem;
 }
 
+
+
+@media (max-width: 768px) {
+	.banner__header {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.banner {
+		padding: 0;
+	}
+
+	.banner__logo {
+		margin: 0;
+	}
+
+	.banner__links div{
+		margin: 2rem 0 0 0;
+		display: block;
+	}
+}
+
+
+
 .banner__title {
 	text-align: center;
 	margin-bottom: 14rem;
@@ -105,7 +131,6 @@ img {
 .description {
 	background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../images/flower.png");
 	background-size: cover;
-	background-repeat: no-repeat;
 	text-align: center;
 }
 
@@ -116,12 +141,12 @@ img {
  	line-height: 1.25;	
 }
 
-.before__carousel {
-	background-color: #4EC73E;
+.before-carousel {
+	background-color: #20B636;
 	padding: 10rem 0;
 }
 
-.before__carousel h6, .after__carousel h6 {
+.before-carousel h6, .after-carousel h6 {
 	font-size: 1.4rem;
 	color: #fff;
 	font-weight: bold;
@@ -129,7 +154,7 @@ img {
 	text-align: center;
 }
 
-.before__carousel h2, .after__carousel h2 {
+.before-carousel h2, .after-carousel h2 {
 	font-size: 4rem;
 	color: #fff;
 	font-weight: bold;
@@ -151,6 +176,7 @@ img {
 	justify-content: space-around;
 	align-items: center;
 	background-color: #fff;
+	padding: 5rem 0 7rem 0;
 }
 
 .carousel__image {
@@ -229,20 +255,27 @@ img {
     transform: translate(0, 50%);
 }
 
-.after__carousel {
-	background-color: #00b2ff;
+.after-carousel {
+	background-color: #3F94DF;
 	padding: 10rem 0;
 }
+
+
+
+
+
 
 .image {
 	display: flex;
 }
 
-.image__item {
-	display: flex;
+.image__one {
+	background-image: url("../images/6.png");
+	background-size: cover;
+	min-width: 100%;
 }
 
-.image__background {
+.image__content {
 	background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../images/7.png");
 	background-size: cover;
 	display: flex;
@@ -251,20 +284,24 @@ img {
 	align-items: center;
 }
 
-.image__background--title {
+.image__content-title {
   	font-size: 1.6rem;
   	color: #fff;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.image__background--body {
+.image__content-body {
   	font-size: 2.2rem;
 	color: #fff;
 	text-align: center;
 	line-height: 1.4;
-	padding: 0 7rem;
 }
+
+
+
+
+
 
 .banner2 {
 	background-image: url("../images/8.png");
@@ -340,30 +377,32 @@ img {
 
 .button--green {
 	border: 1px solid #4EC73E;
-  	color: #4EC73E;
+  	color: #20B636;
 }
 
-.half__description {
-	background-color: #40b540;
-	width: 50%;
+.before-footer__description {
+	background-color: #20B636;
+	width:50%;
 }
 
-.half__image {
-	width: 50%;
+.before-footer__image {
+	background-image: url("../images/9.png");
+	background-size: cover;
+	width: 50%;	
 }
 
-.half {
+.before-footer {
 	display: flex;
 }
 
-.half__title h6 {
+.before-footer__title h6 {
 	font-size: 1.4rem;
 	color: #fff;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.half__title h2 {
+.before-footer__title h2 {
 	font-size: 4rem;
 	color: #fff;
 	font-weight: bold;
@@ -371,23 +410,12 @@ img {
   	line-height: 1.5;
 }
 
-.half__content {
+.before-footer__content {
 	font-size: 1.6rem;
 	color: #fff;
   	line-height: 1.5;
+  	margin: 5rem 0;
 }
-
-.half__description {
-	padding: 10rem 22rem 10rem 38rem;
-}
-
-
-
-
-
-
-
-
 
 .footer__content {
 	background-color: #fff;
@@ -430,8 +458,7 @@ img {
 	display: inline-block;
 }
 
-.footer__listDown li:not(:last-child):after {
-	content: '';
+.footer__listDown li:not(:last-child) {
 	margin: 1rem; 
 }
 
@@ -441,5 +468,39 @@ img {
 
 .footer__down {
 	margin-top: 4rem;
+}
+
+
+
+
+
+
+
+.carousel__content-title {
+	position: relative;
+}
+
+.carousel__content-title::after {
+	content: '';
+	background-color: #20B636;
+	width: 7rem;
+	height: 0.5rem;
+	position: absolute;
+	bottom: -2rem;
+	left: 4rem;
+}
+
+.image__background-title {
+	position: relative;
+}
+
+.image__background-title::before {
+	content: '';
+	background-color: #3483DF;
+	width: 7rem;
+	height: 0.5rem;
+	position: absolute;
+	bottom: -2rem;
+	left: 4rem;
 }
 
