@@ -34,11 +34,6 @@ body {
 	max-width: 90rem;
 }
 
-.container--smaller {
-	max-width: 35rem;
-	padding: 7rem 0;
-}
-
 img { 
 	width: 100%; 
 	height: 100%;
@@ -457,6 +452,15 @@ img {
 	top: 0;
 }
 
+.before-footer__description {
+	max-width: 35rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	height: 48rem;
+}
+
 .before-footer__title h6 {
 	font-size: 1.4rem;
 	color: #fff;
@@ -476,7 +480,6 @@ img {
 	 font-size: 16px;
 	 color: #fff;
 	 line-height: 1.5;
-	 margin: 4rem 0;
 }
 
 .footer {
