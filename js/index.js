@@ -15,9 +15,7 @@ $(document).ready(function() {
 		}]
 	});
 
-	function classToggle() {
-		const navs = document.querySelectorAll('.navbar__items');
-		navs.forEach(nav => nav.classList.toggle('navbar__toggleShow'));
-	}
-	document.querySelector('.navbar__link-toggle').addEventListener('click', classToggle);
+	$('.navbar__link-toggle').click(function () {
+		$('.navbar__items').toggleClass('navbar__toggleShow');
+	});
 });
