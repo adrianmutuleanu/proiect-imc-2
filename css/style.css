@@ -688,9 +688,6 @@ img {
 
 .footer__listDown li {
 	display: inline-block;
-}
-
-.footer__listDown li:not(:last-child) {
 	margin: 1rem; 
 }
 
@@ -704,8 +701,8 @@ img {
 
 @media	(max-width: 1100px) {
 	.footer__up, .footer__down {
-		display: block;
-	}
+		flex-direction: column;
+	}	
 
 	.footer__content h2 {
 		text-align: left;
@@ -719,5 +716,11 @@ img {
 
 	.footer__content {
 		padding-left: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.footer__listDown li {
+		display: block;
 	}
 }
