@@ -40,9 +40,21 @@ img {
 }
 
 .banner {
+	position: relative;
+	height: 96rem;
+	padding: 3rem 5rem 19rem 2.5rem;
+}
+
+.banner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	background-image: url("../images/forest.png");
 	background-size: cover;
-	padding: 3rem 5rem 19rem 2.5rem;
+	z-index: -1;
 }
 
 .navbar {
@@ -54,7 +66,7 @@ img {
 	font-size: 3rem;
 	color: #333;
 	font-weight: bold;
-	margin: -1rem;
+	margin-top: -1rem;
 }
 
 .navbar__link {
@@ -114,6 +126,17 @@ img {
 	text-align: center;
 }
 
+@media (max-width: 1100px) {
+	.banner {
+		height: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.banner {
+		height: auto;
+	}
+}
 
 @media (max-width: 1100px) {
 	.navbar__items,
@@ -154,20 +177,20 @@ img {
 	}
 
 	.banner__title h1 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 		line-height: 1.2;
 	}
 
 	.banner__title h2 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.banner__scroll div {
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 
 	.banner__scroll a {
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 	}
 
 	.banner__scroll div {
@@ -176,16 +199,40 @@ img {
 }
 
 .description {
-	background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../images/flower.png");
-	background-size: cover;
+	position: relative;
+	height: 29rem;
+	background: rgba(0, 0, 0, 0.6);
 	text-align: center;
+	padding: 10rem 0;
+}
+
+.description::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/flower.png");
+	background-size: cover;
+	z-index: -1;
 }
 
 .description__content {
 	font-size: 2.5rem;
 	color: #fff;
-	padding: 10rem 0;
  	line-height: 1.25;	
+}
+
+@media (max-width: 768px) {
+	.description {
+		height: auto;
+		padding: 5rem 1rem;
+	}
+
+	.description__content {
+		font-size: 2rem;
+	}
 }
 
 .before-carousel {
@@ -475,25 +522,59 @@ img {
 	left: 4rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
+	.triple-image {
+		flex-direction: column;
+	}
+
 	.triple-image__content-title::before {
-		bottom: -1rem;
+		bottom: -0.75rem;
 	}
 
 	.triple-image__content-body {
 		line-height: 1;
-		padding: 0 1rem;
+		padding: 0;
+		margin: 1rem 0;
+	}
+
+	.triple-image__content {
+		padding: 1rem;
+	}
+
+	.triple-image__two::before {
+    	width: 50%;
+    	height: 100%;
+	}
+
+	.triple-image__two::after {
+	    top: 0;
+	    right: 0;
+	    left: auto;
+	    width: 50%;
+	    height: 100%;
 	}
 }
 
 .banner2 {
-	background-image: url("../images/8.png");
-	background-size: cover;
+	position: relative;
+	height: 87rem;
 	display: flex;
  	flex-direction: column;
  	text-align: center;
  	margin: 0 auto;
  	padding: 10rem 0;
+}
+
+.banner2::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/8.png");
+	background-size: cover;
+	z-index: -1;
 }
 
 .banner2__subtitle {
@@ -548,12 +629,29 @@ img {
 }
 
 @media (max-width: 768px) {
-	.category__content {
-  		line-height: 1;
+	.banner2 {
+		padding: 5rem 1rem;
+		height: auto;
 	}
 
-	.banner2__subtitle .banner2__category:not(:last-child) {
-		margin-right: 1rem;
+	.banner2__subtitle {
+		flex-direction: column;
+	}
+
+	.banner2__category {
+		margin-bottom: 3rem;
+	}
+
+	.banner2__title h6 {
+		font-size: 1rem;
+	}
+
+	.banner2__title h2 {
+		font-size: 2.5rem;
+	}
+
+	.banner2__content {
+		font-size: 2rem;
 	}
 }
 
@@ -584,8 +682,8 @@ img {
 	height: 100%;
 	background-color: #20B636;
 	position: absolute;
-	left: 0;
 	top: 0;
+	left: 0;
 	z-index: -1;
 }
 
@@ -596,8 +694,8 @@ img {
 	background-image: url("../images/9.png");
 	background-size: cover;
 	position: absolute;
-	right: 0;
 	top: 0;
+	right: 0;
 }
 
 .before-footer__description {
@@ -631,19 +729,38 @@ img {
 }
 
 @media (max-width: 768px) {
+	.before-footer::before {
+		width: 100%;
+		height: 50%;
+	}
+
+	.before-footer::after {
+		width: 100%;
+		height: 50%;
+		top: auto;
+		left: 0;
+		bottom:0;
+	}
+
 	.before-footer__description {
-		max-width: 17rem;
+		height: auto;
+		max-width: 100%;
+		align-items: center;
+		padding: 1rem;
 	}
 
 	.before-footer__title h6 {
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
 
 	.before-footer__title h2 {
 		font-size: 2.5rem;
 	}
 
-
+	.before-footer__body {
+		text-align: center;	
+		margin: 1.5rem 0;
+	}
 }
 
 .footer {
