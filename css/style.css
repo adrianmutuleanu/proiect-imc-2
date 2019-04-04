@@ -128,7 +128,7 @@ img {
 	text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
 	.navbar__items,
 	.navbar {
 		flex-direction: column;
@@ -539,8 +539,6 @@ img {
 
 .banner2 {
 	position: relative;
-	display: flex;
- 	flex-direction: column;
  	text-align: center;
  	margin: 0 auto;
  	padding: 10rem 0;
@@ -872,6 +870,7 @@ img {
 }
 
 
+
 @supports (-ms-ime-align:auto) {
 	.carousel__content {
 		justify-content: space-around;
@@ -887,4 +886,36 @@ img {
 }
 
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.triple-image__content {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
 
+	.triple-image__content-title {
+		width: 100%;
+	}
+
+	.carousel__content {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.before-footer__description {
+		flex-direction: row;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		padding-top: 6.5rem;
+	}
+}
+
+
+@media all and (-ms-high-contrast: none) and (max-width: 1200px), 
+		all and (-ms-high-contrast: active) and (max-width: 1200px) {
+			.banner2__subtitle {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+}
